@@ -1,0 +1,98 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dodaj događaj</title>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <link href='#' rel='icon'>
+  <link rel='stylesheet' type='text/css' media='screen'  href="{{ url_for('static', filename='css/main.css') }}"> 
+</head>
+<body>
+  <nav class="navbar ">
+    <div class="brand-title"><a href="">Event planner</a></div>
+  </nav>
+
+  <div class="rightMenu">
+    <ul style="padding: 0;">
+      <li class="links">Dodaj</li>
+      
+    </ul>
+  </div>
+
+  <div class="popupHolder center">
+    <div class="popup center">
+      <div class="closeBtn">X</div>
+        <h1>Dodaj događaj</h1>
+        <form id="create-event-form">
+          <input type="text" id="naziv-input" placeholder="Naziv događaja" required>
+          <input type="date" id="datum-input" required>
+          <input type="time" id="vrijeme-input" required>
+          <input type="text" id="mjesto-input" placeholder="Mjesto događaja" required>
+          <input type="number" id="dostupne-karte-input" placeholder="Dostupne karte" required>
+          <button class="btnDodaj">Dodaj događaj</button>
+        </form>
+        
+    </div>
+    
+  </div>
+  
+
+  <div class="popupHolder center">
+    <div class="popup center">
+      <div class="closeBtn">X</div>
+        <h1>Izmjeni događaj</h1>
+        <form id="create-event-form">
+          <input type="text" id="naziv-input2" placeholder="Naziv događaja" required>
+          <input type="date" id="datum-input2" required>
+          <input type="time" id="vrijeme-input2" required>
+          <input type="text" id="mjesto-input2" placeholder="Mjesto događaja" required>
+          <input type="number" id="dostupne-karte-input2" placeholder="Dostupne karte" required>
+          <button class="btnDodaj2">Izmjeni događaj</button>
+        </form>
+        
+    </div>
+    
+  </div>
+  
+  
+
+
+
+
+  <main class="sticky2">
+    <table id="dogadaji-table">
+      <thead>
+        <tr>
+          <th class="sort-button">ID
+          </th>
+          <th class="sort-button" >Naziv
+          </th>
+          <th class="sort-button">Datum
+          </th>
+          <th class="sort-button" >Vrijeme
+          </th>
+          <th class="sort-button" >
+            Mjesto
+          </th>
+          <th class="sort-button">
+           Dostupne karte
+          </th>
+          <th class="azuriraj">
+            Azuriraj
+           </th>
+          <th class="deleteBTN">
+            Obrisi
+           </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </main>
+  <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

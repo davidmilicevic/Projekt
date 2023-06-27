@@ -1,0 +1,314 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(../imgs/bck.jpg);
+    height: 100vh;
+  }
+  
+  .center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  ul {
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .wallpaper-divider {
+    padding-top: 13dvh;
+    text-align: center;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 7dvh;
+    background-color: #e7e7e7;
+    color: #333;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  
+  .brand-title {
+    font-size: 1.6rem;
+    margin: .5rem;
+  }
+  
+  .brand-title a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #f2f4f3;
+    padding: 1rem;
+    display: block;
+  }
+  
+  .nav-links li:hover {
+    background-color: #555;
+  }
+
+  .sticky2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Dodajte z-index kako bi sticky zaglavlje bilo iznad ostalih elemenata */
+  }
+  
+  /* MAIN */
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 90dvh;
+    border-radius: 10px;
+  }
+  #dogadaji-table {
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative; /* Dodajte relativnu poziciju kako bi sticky zaglavlje bilo pozicionirano u odnosu na tablicu */
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form button {
+    margin-top: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  
+  th,
+    td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    }
+  tr:nth-child(odd){
+    background-color: #f0f0f0;
+  }
+  tr{
+    background-color: #e2e2e2;
+    cursor: pointer;
+  }
+ 
+  tr:hover{
+    background-color: #3096da
+  }
+  tr:active{
+    background-color: #6dc5ff
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    background-color: #6dc5ff;
+    z-index: 2; 
+   
+  }
+  
+
+  th {
+    position: sticky;
+    top: 0;
+    background-color: #6dc5ff;
+    font-weight: bold;
+  }
+
+  .sort-button:first-child{
+   
+    background-color: wheat;
+  }
+
+
+
+  /* RIGHT MENU */
+
+  .rightMenu {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 80vh;
+    background-color: rgba(203, 203, 203, 0.503);
+    width: 70px;
+    margin: 15px 15px 0 0;
+    z-index: 100;
+    border-radius: 15px;
+  }
+  
+  .rightMenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .rightMenu li {
+    background-color: #6dc5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .rightMenu li:hover {
+    background-color: #3096da;
+
+  }
+  
+
+  /* popup */
+.popupHolder{
+    width: 100%;
+    z-index: 101;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33333367;
+    display: none;
+}
+
+  .popup{
+    width: 20%;
+    margin-top: 100px;
+    height: 60dvh;
+    background-color: rgb(242, 242, 242);
+    z-index: 102;
+    position: relative;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .closeBtn{
+    position: absolute;
+    right: 0;
+    padding: 10px 20px;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    margin: 5px;
+  }
+  .btnDodaj{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .btnDodaj2{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .closeBtn:hover{
+    background-color: rgb(154, 20, 20);
+  }
+
+  #create-event-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+  
+  #create-event-form input[type="text"],
+  #create-event-form input[type="date"],
+  #create-event-form input[type="time"],
+  #create-event-form input[type="number"],
+  #create-event-form button {
+    margin-bottom: 10px;
+    padding: 5px;
+   
+  }
+  
+  #create-event-form input[type="text"],
+  #create-event-form input[type="number"] {
+    width: 200px;
+  }
+  
+  #create-event-form button {
+    background-color: #3096da;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #create-event-form button:hover {
+    background-color: #6dc5ff;
+  }
+
+  .holderclass{
+    padding: 10px;
+    background-color: rgb(214, 94, 94);
+  }
+
+  .holderclass:hover{
+    color: white;
+    background-color: red;
+  }
+
+  .holderclass2{
+    padding: 10px;
+    background-color:rgb(204, 204, 204);
+  }
+
+  .holderclass2:hover{
+    color: white;
+    background-color: rgb(92, 92, 92);
+  }
